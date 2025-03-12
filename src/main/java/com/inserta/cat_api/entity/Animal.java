@@ -1,4 +1,5 @@
 package com.inserta.cat_api.entity;
 
-public class Animal {
+public abstract class Animal {
+
 }
