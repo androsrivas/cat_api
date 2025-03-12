@@ -62,7 +62,7 @@ public class RestApiController {
     @PutMapping("/cats/{catId}")
     public Gato updateCat(@RequestBody Gato newCat) {
         for(Gato cat: catsList) {
-            if(cat.getId() == cat.getId()) {
+            if(cat.getId() == newCat.getId()) {
                 cat.setRaza(newCat.getRaza());
                 cat.setEdad(newCat.getEdad());
                 cat.setOrigen(newCat.getOrigen());
