@@ -2,10 +2,7 @@ package com.inserta.cat_api.controller;
 
 import com.inserta.cat_api.entity.Gato;
 import jakarta.annotation.PostConstruct;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,6 +35,10 @@ public class RestApiController {
         ));
     }
 
+    @GetMapping("/cats")
+    public List<Gato> listCats() {
+        return catsList;
+    }
 
     @GetMapping("/cats/{catId}")
     public Gato getCat(@PathVariable int catId) {
@@ -49,10 +50,12 @@ public class RestApiController {
         return null;
     }
 
+    @PostMapping
+    public Gato addCat(@RequestBody Gato cat) {
+        catsList.add(cat);
 
-    @GetMapping("/cats")
-    public List<Gato> listCats() {
-        return catsList;
+        return cat;
     }
+
 
 }
