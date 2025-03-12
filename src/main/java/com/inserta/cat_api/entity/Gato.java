@@ -5,6 +5,7 @@ public class Gato extends Animal {
     private byte edad;
     private String origen;
     private String temperamento;
+    private int id;
 
     // Constructor por defecto
     public Gato() {
@@ -12,8 +13,9 @@ public class Gato extends Animal {
     }
 
     // Constructor con todos los atributos
-    public Gato(String especie, char alimentacion, String raza, byte edad, String origen, String temperamento) {
-        super(especie, alimentacion);
+    public Gato(int id, String especie, char alimentacion, String raza, byte edad, String origen, String temperamento) {
+        super(especie, alimentacion );
+        this.id = id;
         this.raza = raza;
         this.edad = edad;
         this.origen = origen;
@@ -53,7 +55,14 @@ public class Gato extends Animal {
         this.temperamento = temperamento;
     }
 
-    // Metodo toString()
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "Gato{" +
@@ -63,6 +72,7 @@ public class Gato extends Animal {
                 ", edad=" + edad +
                 ", origen='" + origen + '\'' +
                 ", temperamento='" + temperamento + '\'' +
+                ", id=" + id +
                 '}';
     }
 
