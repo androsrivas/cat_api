@@ -18,6 +18,7 @@ public class RestApiController {
         catsList = new ArrayList<>();
 
         catsList.add(new Gato(
+                1,
                 "Felis silvestris catus",
                 'C',
                 "Europeo común",
@@ -26,6 +27,7 @@ public class RestApiController {
                 "sociable, juguetón, independiente"
         ));
         catsList.add(new Gato(
+                2,
                 "Felis silvestris catus",
                 'C',
                 "Cartujo",
