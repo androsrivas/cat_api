@@ -2,14 +2,14 @@ package com.inserta.cat_api.entity;
 
 public abstract class Animal {
     private String especie;
-    private char alimento;
+    private char alimentacion;
 
     public Animal() {
     }
 
-    public Animal(String especie, char alimento) {
+    public Animal(String especie, char alimentacion) {
         this.especie = especie;
-        this.alimento = alimento;
+        this.alimentacion = alimentacion;
     }
 
     public String getEspecie() {
@@ -20,19 +20,19 @@ public abstract class Animal {
         this.especie = especie;
     }
 
-    public char getAlimento() {
-        return alimento;
+    public char getAlimentacion() {
+        return alimentacion;
     }
 
-    public void setAlimento(char alimento) {
-        this.alimento = alimento;
+    public void setAlimentacion(char alimentacion) {
+        this.alimentacion = alimentacion;
     }
 
     @Override
     public String toString() {
         return "Animal{" +
                 "especie='" + especie + '\'' +
-                ", alimento=" + alimento +
+                ", alimentación=" + alimentacion +
                 '}';
     }
 }
