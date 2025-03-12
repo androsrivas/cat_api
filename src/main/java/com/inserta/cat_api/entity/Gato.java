@@ -12,8 +12,8 @@ public class Gato extends Animal {
     }
 
     // Constructor con todos los atributos
-    public Gato(String especie, char tipoAlimentacion, String raza, byte edad, String origen, String temperamento) {
-        super(especie, tipoAlimentacion);
+    public Gato(String especie, char alimentacion, String raza, byte edad, String origen, String temperamento) {
+        super(especie, alimentacion);
         this.raza = raza;
         this.edad = edad;
         this.origen = origen;
@@ -53,12 +53,12 @@ public class Gato extends Animal {
         this.temperamento = temperamento;
     }
 
-    // Método toString()
+    // Metodo toString()
     @Override
     public String toString() {
         return "Gato{" +
                 "especie='" + getEspecie() + '\'' +
-                ", tipoAlimentacion=" + getTipoAlimentacion() +
+                ", Alimentación=" + getAlimentacion() +
                 ", raza='" + raza + '\'' +
                 ", edad=" + edad +
                 ", origen='" + origen + '\'' +
@@ -66,7 +66,7 @@ public class Gato extends Animal {
                 '}';
     }
 
-    // Método equals()
+    // Metodo equals()
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -79,7 +79,7 @@ public class Gato extends Animal {
                 temperamento.equals(gato.temperamento);
     }
 
-    // Método hashCode()
+    // Metodo hashCode()
     @Override
     public int hashCode() {
         int result = super.hashCode();
