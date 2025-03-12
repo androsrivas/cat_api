@@ -71,5 +71,12 @@ public class RestApiController {
         return newCat;
     }
 
+    @DeleteMapping("/cats/{catId}")
+    public String deleteCat(@PathVariable int catId) {
+        this.catsList.removeIf(c -> c.getId() == catId);
+
+        return "Borrado el gato: " + catId;
+    }
+
 
 }
