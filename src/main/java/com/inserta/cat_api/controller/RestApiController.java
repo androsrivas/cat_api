@@ -49,4 +49,10 @@ public class RestApiController {
         return null;
     }
 
+
+    @GetMapping("/cats")
+    public List<Gato> listCats() {
+        return catsList;
+    }
+
 }
