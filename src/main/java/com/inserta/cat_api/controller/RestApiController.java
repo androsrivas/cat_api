@@ -57,5 +57,19 @@ public class RestApiController {
         return cat;
     }
 
+    @PutMapping("/cats/{catId}")
+    public Gato updateCat(@RequestBody Gato newCat) {
+        for(Gato cat: catsList) {
+            if(cat.getId() == cat.getId()) {
+                cat.setRaza(newCat.getRaza());
+                cat.setEdad(newCat.getEdad());
+                cat.setOrigen(newCat.getOrigen());
+                cat.setTemperamento(newCat.getTemperamento());
+            }
+        }
+
+        return newCat;
+    }
+
 
 }
