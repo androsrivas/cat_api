@@ -39,4 +39,14 @@ public class RestApiController {
     }
 
 
+    @GetMapping("/cats/{catId}")
+    public Gato getCat(@PathVariable int catId) {
+        for(Gato cat : catsList) {
+            if(cat.getId() == catId) {
+                return cat;
+            }
+        }
+        return null;
+    }
+
 }
