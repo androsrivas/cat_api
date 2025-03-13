@@ -1,6 +1,6 @@
 package com.inserta.cat_api.controller;
 
-import com.inserta.cat_api.entity.Gato;
+import com.inserta.cat_api.entity.*;
 import jakarta.annotation.PostConstruct;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,6 +18,7 @@ public class RestApiController {
         catsList = new ArrayList<>();
 
         catsList.add(new Gato(
+                new Humano(3,"Humano",'C', "Juan", (byte)20, "Vegano"),
                 1,
                 "Felis silvestris catus",
                 'C',
@@ -27,6 +28,7 @@ public class RestApiController {
                 "sociable, juguetón, independiente"
         ));
         catsList.add(new Gato(
+            new Humano(3,"Humano",'C', "Juanito", (byte)20, "Vegano"),
                 2,
                 "Felis silvestris catus",
                 'C',

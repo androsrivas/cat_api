@@ -1,18 +1,23 @@
 package com.inserta.cat_api.entity;
 
+
+
 public class Gato extends Animal {
+    private Humano human;
+    private int id;
     private String raza;
     private byte edad;
     private String origen;
     private String temperamento;
-    private int id;
+    
+    
 
     // Constructor por defecto
     public Gato() {
         super();
     }
 
-    // Constructor con todos los atributos
+    // Constructor con todos los atributos menos Humano
     public Gato(int id, String especie, char alimentacion, String raza, byte edad, String origen, String temperamento) {
         super(especie, alimentacion );
         this.id = id;
@@ -22,7 +27,35 @@ public class Gato extends Animal {
         this.temperamento = temperamento;
     }
 
+    // Constructor con todos los atributos  
+    public Gato(Humano human, int id, String especie, char alimentacion, String raza, byte edad, String origen, String temperamento) {
+        super(especie, alimentacion );
+        this.human = human;
+        this.id = id;
+        this.raza = raza;
+        this.edad = edad;
+        this.origen = origen;
+        this.temperamento = temperamento;
+    }
+    @Override
+    public String comer(){
+        return "Soy un Gato comiendo";
+    }
+    public String dormir(){
+        return "Soy un Gato dormiendo";
+    }
+    public String pasear(){
+        return "Soy un Gato paseando";
+    }
+
     // Getters y setters
+    public void setHumano(Humano human){
+        this.human  = human;
+    }
+    public Humano getHumano(){
+        return this.human;
+    }
+
     public String getRaza() {
         return raza;
     }
@@ -65,12 +98,14 @@ public class Gato extends Animal {
 
     @Override
     public String toString() {
+        Humano h = (this.human != null)?this.human:new Humano(0,"Sin dueño", (byte)0," ");
         return "Gato{" +
-                ", id=" + id +
+                "Humano= '" +  h + '\'' +
+                ",id= '" + id + '\'' +
                 "especie='" + getEspecie() + '\'' +
-                ", Alimentación=" + getAlimentacion() +
+                ", Alimentación='" + getAlimentacion() + '\'' +
                 ", raza='" + raza + '\'' +
-                ", edad=" + edad +
+                ", edad=" + edad + '\'' +
                 ", origen='" + origen + '\'' +
                 ", temperamento='" + temperamento + '\'' +
                 
