@@ -55,7 +55,6 @@ public class RestApiController {
     @PostMapping("/cats")
     public Gato addCat(@RequestBody Gato cat) {
         catsList.add(cat);
-
         return cat;
     }
 

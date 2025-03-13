@@ -66,13 +66,14 @@ public class Gato extends Animal {
     @Override
     public String toString() {
         return "Gato{" +
+                ", id=" + id +
                 "especie='" + getEspecie() + '\'' +
                 ", Alimentación=" + getAlimentacion() +
                 ", raza='" + raza + '\'' +
                 ", edad=" + edad +
                 ", origen='" + origen + '\'' +
                 ", temperamento='" + temperamento + '\'' +
-                ", id=" + id +
+                
                 '}';
     }
 
