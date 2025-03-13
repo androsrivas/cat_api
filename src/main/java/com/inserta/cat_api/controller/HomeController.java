@@ -25,7 +25,7 @@ public class HomeController {
                       "        body {\n" +
                       "            font-family: Arial, sans-serif;\n" +
                       "            margin: 20px;\n" +
-                      "            background-image: url('https://es.rollingstone.com/wp-content/uploads/2024/05/Critica-La-guerra-de-las-galaxias-episodio-I-La-amenaza-fantasma-Star-Wars-Episode-I-The-Phantom-Menace.jpg'); /* Cambia esta URL por una imagen válida */\n" +
+                      "            background-image: url('https://cdn2.thecatapi.com/images/Z6mrcccZv.jpg');  \n" +
                       "            background-size: cover;\n" +
                       "            background-repeat: no-repeat;\n" +
                       "            background-attachment: fixed;\n" +
@@ -33,7 +33,7 @@ public class HomeController {
 
                       "        }\n" +
                       "        h1 {\n" +
-                      "            color: #fff;\n" +
+                      "            color: #000;\n" +
                       "        }\n" +
                       "        ul {\n" +
                       "            list-style-type: none;\n" +
